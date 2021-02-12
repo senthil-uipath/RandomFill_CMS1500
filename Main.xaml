@@ -91,7 +91,7 @@
         <OutArgument x:TypeArguments="x:Int32">[total]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">100</InArgument>
+        <InArgument x:TypeArguments="x:Int32">10</InArgument>
       </Assign.Value>
     </Assign>
     <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each PDF to be created" sap:VirtualizedContainerService.HintSize="435.2,473.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Enumerable.Range(1,total)]">

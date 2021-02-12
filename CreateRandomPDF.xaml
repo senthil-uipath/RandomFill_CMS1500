@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CreateRandomPDF" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1272,3320.8" sap2010:WorkflowViewState.IdRef="CreateRandomPDF_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateRandomPDF" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1272,3341.6" sap2010:WorkflowViewState.IdRef="CreateRandomPDF_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
       <x:String>System.Activities</x:String>
@@ -64,7 +64,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateRandomPDF" sap:VirtualizedContainerService.HintSize="1282.4,3216" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateRandomPDF" sap:VirtualizedContainerService.HintSize="1282.4,3236.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
     </Sequence.Variables>
@@ -98,13 +98,13 @@
     </ui:ExcelApplicationScope>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1240.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Opening: &quot;+IO.Directory.GetCurrentDirectory+&quot;\Documents\CMS 1500 Template.pdf&quot;]" />
     <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[IO.Directory.GetCurrentDirectory+&quot;\Documents\CMS 1500 Template.pdf&quot;]" DisplayName="Start Process - Open Blank PDF Template" FileName="C:\Program Files (x86)\Adobe\Acrobat DC\Acrobat\acrobat.exe" sap:VirtualizedContainerService.HintSize="1240.8,88" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
-    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'acrobat.exe CMS'" sap:VirtualizedContainerService.HintSize="1240.8,2560" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="ff1d86a88c333ac4400629c1d2b17eab" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='CMS 1500 Template*' /&gt;">
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'acrobat.exe CMS'" sap:VirtualizedContainerService.HintSize="1240.8,2580.8" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="ff1d86a88c333ac4400629c1d2b17eab" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='CMS 1500 Template*' /&gt;">
       <ui:WindowScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="PDF Scope" sap:VirtualizedContainerService.HintSize="1207.2,2412.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="PDF Scope" sap:VirtualizedContainerService.HintSize="1207.2,2433.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="idxSelector" />
               <Variable x:TypeArguments="x:String" Name="nameSelector" />
@@ -239,7 +239,7 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey - Save As" sap:VirtualizedContainerService.HintSize="1165.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="S" KeyModifiers="Ctrl, Shift">
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey - Save As Window Shortcut" sap:VirtualizedContainerService.HintSize="1165.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="S" KeyModifiers="Ctrl, Shift">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ced3bae1-2070-4aa4-b0d5-fea59b49c757" InformativeScreenshot="cbf071a21b0be1c2de3be6676d6acc11" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='1' role='client' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -273,19 +273,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into - Folder Path" sap:VirtualizedContainerService.HintSize="1165.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[IO.Directory.GetCurrentDirectory+&quot;\Documents&quot;]">
-              <ui:TypeInto.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="822c6f16-9662-4a7e-bfd6-5edb81ef19d3" InformativeScreenshot="d56fd679a970b59f08b31ecc6c4f1f90" Selector="&lt;wnd app='acrobat.exe' cls='#32770' title='Save As PDF' /&gt;&lt;wnd ctrlid='41477' /&gt;&lt;wnd ctrlid='41477' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:TypeInto.Target>
-            </ui:TypeInto>
-            <Assign sap:VirtualizedContainerService.HintSize="1165.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Assign filename based on timestamp" sap:VirtualizedContainerService.HintSize="1165.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[filename]</OutArgument>
               </Assign.To>
@@ -293,7 +281,7 @@
                 <InArgument x:TypeArguments="x:String">["CMS1500_Example"+ System.DateTime.Now.ToString("MM-dd-yyyy_hhmmss")]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into - File Name" sap:VirtualizedContainerService.HintSize="1165.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[filename+&quot;[k(enter)]&quot;]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into - File Name &amp; Full Path" EmptyField="True" sap:VirtualizedContainerService.HintSize="1165.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="[IO.Directory.GetCurrentDirectory+&quot;\Documents\&quot;+filename]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="822c6f16-9662-4a7e-bfd6-5edb81ef19d3" InformativeScreenshot="a484adde21628fe26baa9143aeb644e7" Selector="&lt;wnd app='acrobat.exe' cls='#32770' title='Save As PDF' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -305,6 +293,18 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey - Enter to Save File" sap:VirtualizedContainerService.HintSize="1165.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ced3bae1-2070-4aa4-b0d5-fea59b49c757" InformativeScreenshot="cbf071a21b0be1c2de3be6676d6acc11" Selector="&lt;wnd app='acrobat.exe' cls='#32770' title='Save As PDF' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1165.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;CLOSING: &quot;+filename]" />
             <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window of new PDF" sap:VirtualizedContainerService.HintSize="1165.6,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="ff1d86a88c333ac4400629c1d2b17eab" WaitForReady="INTERACTIVE" />
           </Sequence>
