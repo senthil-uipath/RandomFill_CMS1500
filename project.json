@@ -23,8 +23,8 @@
       "*password*"
     ],
     "executionType": "Workflow",
-    "readyForPiP": false,
-    "startsInPiP": false
+    "readyForPiP": true,
+    "startsInPiP": true
   },
   "designOptions": {
     "projectProfile": "Developement",
